@@ -1,0 +1,204 @@
+/* Синие иконки в navbar */
+
+.social-list__link {
+    background-color: #0067e0;
+}
+
+@media (max-width: 1023px) {
+    .header__wrapper .header__social-list {
+        display: flex;
+        padding-left: 10px;
+        margin-left: 12px;
+        border-left: 1px solid rgba(217, 217, 222, .2);
+    }
+}
+
+
+/* Фото к новости */
+
+.modal-photos__photo > picture > img {
+    object-fit: contain;
+}
+
+
+/* Шапка новости */
+
+.article-header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 32px;
+}
+
+.article-img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.article-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.article-inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.article-inf-date {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .article-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .article-img {
+        max-width: 100%;
+    }
+}
+
+
+/* Карточки новостей */
+
+section.industry-cards .industry-news-list__text .industry-news-list__title {
+    font-size: 18px;
+}
+
+section.industry-cards .news-date--small {
+    font-size: 16px;
+}
+
+a.industry-news-list__link {
+    grid-template-columns: 170px auto;
+}
+
+div.industry-news-list__photo {
+    width: 170px;
+    height: 130px;
+}
+
+
+/* ФГКУ Росгранстрой > Филиалы */
+
+.filialy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.filialy-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.filialy-card__title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222740;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.filialy-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filialy-list__item {
+    display: grid;
+    grid-template-columns: 20px 90px 1fr;
+    align-items: start;
+    gap: 8px;
+}
+
+
+/* Счетчик дней */
+
+#countdown-banner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+    background: #0067e0;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+#countdown-banner .text {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+#countdown-banner .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 8px;
+    min-width: 80px;
+}
+
+#countdown-banner .counter .number {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+#countdown-banner .counter .label {
+    font-size: 16px;
+    font-weight: 600;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    #countdown-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0;
+        padding: 20px;
+    }
+
+    #countdown-banner .counter {
+        justify-self: center;
+        min-width: 100px;
+    }
+}
